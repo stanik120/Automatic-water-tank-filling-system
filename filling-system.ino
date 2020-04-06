@@ -1,56 +1,57 @@
-#include <EEPROM.h>                     //obsluga pamieci EPROM
+#include <EEPROM.h>						   //EPROM support
 
-unsigned char przekaznik = 13;          //przekaznik pompy
-unsigned char czujnikg = 4;             //czujnik gorny (brazowy)
-unsigned char czujnikd = 3;             //czujnik dolny (zulto zielony)
-unsigned char flowsensor = 2;           //przepływomierz
+unsigned char relay = 13;				   //pump activation relay
+unsigned char up_sensor = 4;			   //upper sensor located in the tank
+unsigned char bot_sensor = 3;			   //bottom sensor located in the tank
+unsigned char flowsensor = 2;			   //flow sensor located before the pump
 
-bool napelnianie = EEPROM.read(0);      //zczytanie stanu zbiornika z pamieci EEPROM
+bool position = EEPROM.read(0);		   //reading the tank status from the EEPROM memory
 
-volatile int flow_frequency;            // Measures flow sensor pulses
-void flow ()                            // Interrupt function
+volatile int flow_frequency;			   // Measures flow sensor pulses
+void flow ()							      // Interrupt function
 {
    flow_frequency++;
 }
 
 void setup() {
-  pinMode(przekaznik, OUTPUT);          //wyjscie na przekaznik pompy
-  pinMode(czujnikg, INPUT);             //wejscie z gornego czujnika
-  pinMode(czujnikd, INPUT);             //wejscie z dolnego czujnika
+  pinMode(relay, OUTPUT);				   //output on pump relay
+  pinMode(up_sensor, INPUT);			   //input from the upper sensor
+  pinMode(bot_sensor, INPUT);			   //input from the bottom sensor
 
-  digitalWrite(przekaznik, HIGH);       //wylacza przekaznik
+  digitalWrite(relay, HIGH);			   //Turn off pump relay
 
   pinMode(flowsensor, INPUT);
-  digitalWrite(flowsensor, HIGH);       // Optional Internal Pull-Up
-  attachInterrupt(0, flow, RISING);     // Setup Interrupt
-  sei(); // Enable interrupts
+  digitalWrite(flowsensor, HIGH);	   // Optional Internal Pull-Up
+  attachInterrupt(0, flow, RISING);	   // Setup Interrupt
+  sei(); 								      // Enable interrupts
 }
+
 void loop() {
-    if(digitalRead(czujnikg) == 0)      //jezeli woda dojdzie do gornego czujnika ustaw napelnianie na false
+    if(digitalRead(up_sensor) == 0)	   //if the water rises to the upper sensor, set position to false
     {
-      napelnianie = false;
+      position = false;
     }
-    if(digitalRead(czujnikd) == 1)      //jezeli woda spadnie ponizej dolnego czujnika ustaw napelnianie na true
+    if(digitalRead(bot_sensor) == 1)   //if the water drops below the bottom sensor, set position to false
     {
-      napelnianie = true;
+      position = true;
     }
-    EEPROM.update(0, napelnianie);      //zapis stanu zbiornika do pamieci EEPROM
-    if(napelnianie == false)            //jezeli napelnianie jest false przekaznik pompy zostaje wylaczony oraz program robi przerwe na godzine i ponownie sprawdzi stan czujnikow
+    EEPROM.update(0, position);			//save tank status to EEPROM
+	
+	if(position == false)				   //if the position is false, the pump relay is turned off and the program pauses for an hour and re-checks the sensor status
     {
-      digitalWrite(przekaznik, HIGH);
-      delay(3600000);                   //przerwa na godzine
+      digitalWrite(relay, HIGH);
+      delay(3600000);					   //one hour break
     }
-    if(napelnianie == true)             //jezeli napelnianie jest true wlacz pompe i sprawdz czy plynie woda
+    if(position == true)				   //if position is true turn on the pump and check if water flows
     {
-      digitalWrite(przekaznik, LOW);
-      flow_frequency = 0;               //wyzeruj licznik przeplywu
-      delay(10000);                     //poczekaj 10 sekund (sprawdza przeplyw co 10 sekund)
-      if (flow_frequency < 10)          //jezeli woda nie plynie wylacz przekaznik pompy oraz zrob przerwe na godzine i ponownie sprawdz czy plynie woda
+      digitalWrite(relay, LOW);
+      flow_frequency = 0;				   //reset the flow meter
+      delay(10000);						   //wait 10 seconds (checks flow every 10 seconds)
+      if (flow_frequency < 10)			//if the water does not flow, turn off the pump relay and take an hour break and check if water flows again
       {
-        digitalWrite(przekaznik, HIGH);
-        delay(3600000);                 //przerwa na godzine
+        digitalWrite(relay, HIGH);
+        delay(3600000);					   //one hour break
       }
-      flow_frequency = 0;               //wyzeruj licznik przeplywu
+      flow_frequency = 0;				   //reset the flow meter
     }
-    
 }
