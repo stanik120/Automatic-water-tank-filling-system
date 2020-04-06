@@ -19,7 +19,7 @@ For this purpose, I used arduino nano, a relay, two liquid level sensor, a flow 
 ### This is how it looks
 
 ### Version 1.1
-![Version 1.1](http://url/to/img.png)
+![Version 1.1](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/4f5e33a5-397c-493e-8f80-4a1d991e4dbb/20200406_115626.jpg)
 
 ### Version 1.0
 ![Version 1.0](http://url/to/img.png)
