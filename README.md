@@ -3,7 +3,7 @@ I live in Gambia, the smallest African country.  And we have a little problem wi
 For this purpose, I used arduino nano, a relay, two liquid level sensor, a flow sensor, a programmable timer with time support. Behind the relay I also used a contactor to which I just connected the pump and not to the relay itself so that the relay does not work under heavy load and can work longer.
 
 ### Used parts:
-* Arduino nano or other version
+* Arduino nano
 * Liquid flow sensor YF-S201 30l/m
 * Relay module 1 channel - 10A / 250VAC contacts - 5V coil*
 * Liquid level sensor CMW55 - magnetic x 2
@@ -13,7 +13,7 @@ For this purpose, I used arduino nano, a relay, two liquid level sensor, a flow 
 ### Connection diagram
 * Relay module - **D13**
 * Upper liquid level sensor - **D4**
-* oBttom liquid level sensor - **D3**
+* Bttom liquid level sensor - **D3**
 * Flow sensor - **D2**
 ![Connection diagram](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/850fd99f-0562-4f27-b359-a58d1b2b81e3/Projekt.png)
 
