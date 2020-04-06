@@ -26,3 +26,11 @@ For this purpose, I used arduino nano, a relay, two liquid level sensor, a flow 
 
 ### The first prototype
 ![Prototyp](http://url/to/img.png)
+
+### Contact
+If anyone would be interested in buying a ready-made solution and assembly, please contact me. I can use Signal and WhatsApp.
+Phone number: +220 741 31 78
+E-mail: [stanik@tuta.io](mailto:stanik@tuta.io)
+
+### License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
