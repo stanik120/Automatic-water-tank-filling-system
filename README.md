@@ -15,7 +15,7 @@ For this purpose, I used arduino nano, a relay, two liquid level sensor, a flow 
 * Upper liquid level sensor - **D4**
 * Bttom liquid level sensor - **D3**
 * Flow sensor - **D2**
-![Connection diagram](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/850fd99f-0562-4f27-b359-a58d1b2b81e3/Projekt.png)
+![Connection diagram](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/e285b3d0-0eb8-468e-afb5-4bfefd4be253/diagram.jpg)
 
 ### Program code for arduino
 [filling-system.ino](https://github.com/stanik120/Automatic-water-tank-filling-system/blob/master/filling-system.ino)
