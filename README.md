@@ -11,26 +11,31 @@ For this purpose, I used arduino nano, a relay, two liquid level sensor, a flow 
 * multi-functional programmable electronic timer (to make the system work only at night)
 
 ### Connection diagram
-![Connection diagram](http://url/to/img.png)
+* Relay module - **D13**
+* Upper liquid level sensor - **D4**
+* oBttom liquid level sensor - **D3**
+* Flow sensor - **D2**
+![Connection diagram](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/850fd99f-0562-4f27-b359-a58d1b2b81e3/Projekt.png)
 
 ### Program code for arduino
 [filling-system.ino](https://github.com/stanik120/Automatic-water-tank-filling-system/blob/master/filling-system.ino)
 
 ### This is how it looks
-
+[Tank](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/a3a79fa9-b262-4321-9e8a-dbca006d90e1/1586182276588.jpg)
+[Inside]()
 ### Version 1.1
 ![Version 1.1](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/4f5e33a5-397c-493e-8f80-4a1d991e4dbb/20200406_115626.jpg)
 
 ### Version 1.0
-![Version 1.0](http://url/to/img.png)
+![Version 1.0](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/ae60dc1e-e17f-42a8-88d0-188162127816/1579833065635.jpg)
 
 ### The first prototype
-![Prototyp](http://url/to/img.png)
+![Prototyp](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/01a2388f-2db1-42de-acb5-7c51f5b14108/1570472964516.jpg)
 
 ### Contact
 If anyone would be interested in buying a ready-made solution and assembly, please contact me. I can use Signal and WhatsApp.
-Phone number: +220 741 31 78
-E-mail: [stanik@tuta.io](mailto:stanik@tuta.io)
+* Phone number: +220 741 31 78
+* E-mail: [stanik@tuta.io](mailto:stanik@tuta.io)
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
