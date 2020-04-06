@@ -22,13 +22,12 @@ For this purpose, I used arduino nano, a relay, two liquid level sensor, a flow 
 
 ### This is how it looks
 [Tank](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/a3a79fa9-b262-4321-9e8a-dbca006d90e1/1586182276588.jpg)
-[Inside]()
+[Inside](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/8ffa80e9-89d1-4870-b099-5895e4a89e0c/20200406_140104.jpg)
+[Flow sensor](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/643deaec-c574-4f55-a8a5-c1504a15085f/20200406_140258.jpg)
 ### Version 1.1
 ![Version 1.1](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/4f5e33a5-397c-493e-8f80-4a1d991e4dbb/20200406_115626.jpg)
-
 ### Version 1.0
 ![Version 1.0](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/ae60dc1e-e17f-42a8-88d0-188162127816/1579833065635.jpg)
-
 ### The first prototype
 ![Prototyp](https://content.evernote.com/shard/s385/sh/c911d4f7-1466-4aef-b563-31e97de32083/8895f940a1ed3e16fccee87b8fa9ea96/res/01a2388f-2db1-42de-acb5-7c51f5b14108/1570472964516.jpg)
 
@@ -38,4 +37,4 @@ If anyone would be interested in buying a ready-made solution and assembly, plea
 * E-mail: [stanik@tuta.io](mailto:stanik@tuta.io)
 
 ### License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the CC BY-NC 4.0 - see the [LICENSE.md](LICENSE.md) file for details.
